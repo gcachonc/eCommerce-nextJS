@@ -21,7 +21,6 @@ const ProductListing = () => {
         if(filters.includes(filter)){
             const newfilterController = removeItemFromArr(filters, filter)
             filters = newfilterController
-            console.log(newfilterController)
             loadProductsFiltered(page, newfilterController).then(result => setProductList(result))
         }
         else{
@@ -35,13 +34,9 @@ const ProductListing = () => {
         if(identifier === "prev" && page > 1){
             page = page - 1
             setPage(page)
-            // loadProductsFiltered(page, filters).then(result => setProductList(result))
-            console.log(page)
         }else if(identifier === "next"){
             page = page + 1
             setPage(page)
-            // loadProductsFiltered(page, filters).then(result => setProductList(result))
-            console.log(page)
         }
     }
 

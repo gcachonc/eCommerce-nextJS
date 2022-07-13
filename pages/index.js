@@ -10,7 +10,6 @@ import TitleProducts from '../src/components/TitleProducts/TitleProducts'
 import {loadFeaturedProduct, loadProducts} from "../src/lib/ApiRequest.js"
 
 export default function Home({ featuredProduct, productList }) {
-  console.log(productList);
   return (
     <div className={styles.container}>
       <Header />
